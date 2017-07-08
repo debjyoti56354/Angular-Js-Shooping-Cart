@@ -1,0 +1,88 @@
+<!doctype html> 
+<html > 
+<head> 
+ <script src="js/angular.js"></script> 
+ <!--<script src="script.js"></script> -->
+ <script src="js/firstag2.js"></script> 
+  <!--<script src="js/filter.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Proj 1</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	body {font-family: Arial; } 
+ 
+table {border-collapse: collapse; } 
+ 
+td {border: 1px solid black;     padding: 5px; } 
+ 
+th {border: 1px solid black;
+padding: 5px;
+text-align: left;
+cursor: pointer; }
+
+ .arrow-up {
+ width: 0;
+ height: 0;
+ border-left: 5px solid transparent;
+ border-right: 5px solid transparent;
+ border-bottom: 10px solid black;
+ display:inline-block; } 
+ 
+ .arrow-down {
+ width: 0;
+ height: 0;
+ border-left: 5px solid transparent;
+ border-right: 5px solid transparent;
+ border-top: 10px solid black;
+ display:inline-block;
+ } 
+ 
+	
+	</style>
+ 
+</head> 
+<body > 
+<!--<div ng-controller="myCtrl"> 
+  10+20 = {{ 10 + 20 }}  <br>
+  {{message}}
+  
+  <div>First Name : {{ employee.firstName }}</div>  
+  <div>Last Name : {{ employee.lastName }}</div>   
+  <div>Gender : {{ employee.gender}}</div>
+ </div> -->
+
+ <div ng-app="Demo">
+   
+  
+ 
+   
+      
+       
+	<br /><br />         
+	<div ng-controller="redColourController">Root Scope Colour : {{rootScopeColour}} <br />    
+	Red Colour Controller : {{redColour}} <br />    
+	Green Colour Controller :<span style="color:red" ng-show="greenColour == undefined">greenColour is undefined</span> </div> 
+ 
+<br /> 
+ 
+
+ 
+<div ng-controller="greenColourController">Root Scope Colour : {{rootScopeColour}} <br />    
+ Green Colour Controller : {{greenColour}} <br />
+ Red Colour Controller :<span style="color:red" ng-show="redColour == undefined">redColour is undefined</span> </div> 
+ 
+    <br /> 
+		
+		
+ </div>
+ 
+</body> 
+</html> 

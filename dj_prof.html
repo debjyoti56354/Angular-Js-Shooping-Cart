@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> Debjyoti </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	.carousel .item {
+  height: 400px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+	
+	</style>
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	
+	<style>
+	alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+	
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+
+		<script>
+		//made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+		
+		
+		
+		
+		
+		
+		</script>
+		
+		
+		
+		
+	
+	
+<style>
+body {
+  background-color:#363635;
+
+  color:#fff;
+  padding-top:1em;
+
+	font-family: 'Libre Baskerville', sans-serif;
+
+  
+}
+
+* { color:#777; text-decoration: none;}
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current){
+        $('#show-previous-image, #show-next-image').show();
+        if(counter_max == counter_current){
+            $('#show-next-image').hide();
+        } else if (counter_current == 1){
+            $('#show-previous-image').hide();
+        }
+    }
+
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+
+    function loadGallery(setIDs, setClickAttr){
+        var current_image,
+            selector,
+            counter = 0;
+
+        $('#show-next-image, #show-previous-image').click(function(){
+            if($(this).attr('id') == 'show-previous-image'){
+                current_image--;
+            } else {
+                current_image++;
+            }
+
+            selector = $('[data-image-id="' + current_image + '"]');
+            updateGallery(selector);
+        });
+
+        function updateGallery(selector) {
+            var $sel = selector;
+            current_image = $sel.data('image-id');
+            $('#image-gallery-caption').text($sel.data('caption'));
+            $('#image-gallery-title').text($sel.data('title'));
+            $('#image-gallery-image').attr('src', $sel.data('image'));
+            disableButtons(counter, $sel.data('image-id'));
+        }
+
+        if(setIDs == true){
+            $('[data-image-id]').each(function(){
+                counter++;
+                $(this).attr('data-image-id',counter);
+            });
+        }
+        $(setClickAttr).on('click',function(){
+            updateGallery($(this));
+        });
+    }
+});
+
+</script>
+
+<style>
+.modal-dialog {}
+.thumbnail {margin-bottom:6px;}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+}
+</style>	
+
+
+
+
+
+
+
+	
+  </head>
+  <body>
+  
+   
+<div class="container-fluid" style="color:#777"> 
+ <div class="well">
+<div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	 <img src="images/dj _profile.jpeg" class="img-circle" alt="Cinque Terre" width="60%" height="100%"> 
+	 
+	 </div> 
+	 
+	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><br><br><br>
+		<h1>
+		  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Debjyoti Das.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+			<span class="wrap"></span>
+		  </a>
+		</h1>
+	 
+	 </div> 
+	 	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" align="center"><br><br><br>
+		<h1>
+		  <a href="https://drive.google.com/open?id=0B1OSagwF9KBvQVhkSlpwUThHWWM" target="_blank" class="btn btn-success btn-lg" role="button">Resume</a>
+		  </a>
+		</h1>
+	 
+	 </div> 
+	 
+	 </div>
+	 </div>
+
+
+
+
+</div> 
+
+<div class="container-fluid" style="color:#777"> 
+ <div class="well" >
+<div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8">
+	 <div class="panel panel-info"> 
+	 <div class="panel-heading"> <h2> About Me</div> 
+	 <div class="panel-body">
+	 <b><h4>Hello! I'm Debjyoti Das, tech enthusiast, currently pursuing Computer Engineering(B.Tech) from Sardar Patel Institute Of Technology, Andheri.<br>
+	 I love coding. I also have great interest in android application and web development.</h4></b> 
+	 </div> 
+	 
+	 
+	 </div> 
+	 </div>
+	 
+	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		<div class="panel panel-default"> 
+	
+	 <div class="panel-body">
+		 <span class="glyphicon glyphicon-map-marker"></span><font size="3.5">         Mumbai,India</FONT><br><br>
+		 <span class="glyphicon glyphicon-envelope"></span><font size="3.5">         das.debjyoti56354@gmail.com</FONT><br><br>
+		 <span class="glyphicon glyphicon-link"></span><font size="3.5">     <a href="https://www.hackerrank.com/das_debjyoti5631">Hacker Rank</a>   </FONT><br>
+		 
+		</div>
+	 
+	 </div> 
+
+	 
+	 </div>
+	 </div>
+
+
+
+
+</div> 
+</div>
+
+<div class="container-fluid" style="color:#777"> 
+ <div class="well" >
+<div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8">
+	 <div class="panel panel-info"> 
+	 <div class="panel-heading"> <h2> My Projects </h2></div> 
+	 <div class="panel-body">
+	 <b><h2><center>Restro</h2></b>
+<font size="4"><center>Online Restaurant Booking Sytsem</center>	 </font><br>
+<center>  <img class="img-responsive" src="images/restro.jpg" alt="RESTRO"  style="width:100%; height:100%;" /> <br>
+<center>It is a virtual web application which uses GOOGLE MAPS and ZOMATO API and one can easily locate and book hotels online.By using this sysytem the
+ user can boo tables, order food and search for restaurants. It is a vitual online restaurant booking system.This system was developed using PHP,HTML,CSS.</center><br><br>
+
+<div class="row"> 
+
+
+<div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro1.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro1.jpg" alt="Short alt text">
+ </a> </div>
+ 
+ <div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro2.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro2.jpg" alt="Short alt text"> </a> </div>
+
+ <div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro3.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro3.jpg" alt="Short alt text"> </a> </div>
+
+ <div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro4.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro4.jpg" alt="Short alt text"> </a> </div>
+				
+ <div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro5.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro5.jpg" alt="Short alt text"> </a> </div>
+				
+ <div class="col-xs-3 col-sm-3 col-md-2"> 
+<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro6.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="images/restro6.jpg" alt="Short alt text"> </a> </div>
+
+
+
+	 
+	 
+	 </div> 
+	 
+	 
+	 <div class="row"> 
+
+
+				<div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro1.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro7.jpg" alt="Short alt text">
+				 </a> </div>
+				 
+				 <div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro2.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro8.jpg" alt="Short alt text"> </a> </div>
+
+				 <div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro3.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro9.jpg" alt="Short alt text"> </a> </div>
+
+				 <div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro4.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro10.jpg" alt="Short alt text"> </a> </div>
+								
+				 <div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro5.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro11.jpg" alt="Short alt text"> </a> </div>
+								
+				 <div class="col-xs-3 col-sm-3 col-md-2"> 
+				<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="images/restro6.jpg" data-target="#image-gallery">
+								<img class="img-responsive" src="images/restro12.jpg" alt="Short alt text"> </a> </div>
+
+
+
+	 
+	 
+	 </div> 
+	 
+	 
+	 
+	 
+	 
+	 
+	 </div>
+	 
+	 
+	 <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+            </div>
+            <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="">
+            </div>
+            <div class="modal-footer">
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+                </div>
+
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                    This text will be overwritten by jQuery
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" id="show-next-image" class="btn btn-default">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	 
+	 
+	 </div>
+	 </div>
+	 
+	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		<div class="panel panel-default"> 
+	
+	 <div class="panel-body">
+		 <span class="glyphicon glyphicon-map-marker"></span><font size="3.5">         Mumbai,India</FONT><br><br>
+		 <span class="glyphicon glyphicon-envelope"></span><font size="3.5">         das.debjyoti56354@gmail.com</FONT><br><br>
+		 <span class="glyphicon glyphicon-link"></span><font size="3.5">     <a href="https://www.hackerrank.com/das_debjyoti5631">Hacker Rank</a>   </FONT><br>
+		 
+		</div>
+	 
+	 </div> 
+
+	 
+	 </div>
+	 </div>
+
+
+
+
+</div> 
+</div>
+
+
+
+
+ 
+
+	
+	 
+	
+	
+	
+	
+	
+	</body>
+	</html>

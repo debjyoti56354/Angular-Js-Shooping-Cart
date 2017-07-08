@@ -1,0 +1,90 @@
+<!doctype html> 
+<html  ng-app="Demo"> 
+<head> 
+ <script src="js/angular.js"></script> 
+  <script src="js/route.js"></script> 
+<!--<script src="js/firstag.js"></script> -->
+<!-- <script src="css/style.css"></script>-->
+ <script src="js/script2.js"></script>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Proj 1</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<style>
+	
+.header {
+width: 800px;   
+  height: 80px;   
+  text-align: center; 
+  background-color: #BDBDBD;
+  } 
+ 
+.footer {    
+ background-color: #BDBDBD;    
+ text-align: center; 
+ } 
+ 
+.leftMenu { 
+    height: 500px;   
+	background-color: #D8D8D8; 
+    width: 150px; } 
+ 
+.mainContent {   
+  height: 500px;   
+  background-color: #E6E6E6;  
+  width: 650px; } 
+ 
+a{  
+   display:block;    
+   padding:5px } 
+
+	
+	</style>
+ 
+</head> 
+<body > 
+<!--<div ng-controller="myCtrl"> 
+  10+20 = {{ 10 + 20 }}  <br>
+  {{message}}
+  
+  <div>First Name : {{ employee.firstName }}</div>  
+  <div>Last Name : {{ employee.lastName }}</div>   
+  <div>Gender : {{ employee.gender}}</div>
+ </div> -->
+
+
+   
+  <table style="font-family: Arial">   
+  <tr>    
+  <td colspan="2" class="header">         
+  <h1>WebSite Header</h1>
+  </td></tr>    
+  <tr>
+  <td class="leftMenu">
+  <a href="#/home">Home</a>
+  <a href="#/courses">Courses</a>       
+  <a href="#/students">Students</a>    
+  </td>     
+ <td class="mainContent"><ng-view></ng-view>       
+  </td></tr>  
+  
+  <tr>
+  <td colspan="2" class="footer"> 
+  <b>Website Footer</b></td>     
+  </tr> </table> 
+ 
+   
+		
+ 
+ 
+</body> 
+</html> 

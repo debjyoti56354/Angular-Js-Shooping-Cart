@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Proj 1</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+  </head>
+  <script>
+  var shiftWindow = function() { scrollBy(0, -50) };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow);
+
+  </script>
+ 
+  <script>
+setTimeout(function() {
+    $('#myModal').modal();
+}, 2000);
+</script>
+  
+  <body>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top"> 
+	<div class="container-fluid">
+	<div class="navbar-header"> 
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+	<a class="navbar-brand" href="#">WebSiteName</a> 
+	</div> 
+	<div class="collapse navbar-collapse" id="myNavbar"> 
+	
+	<ul class="nav navbar-nav" > 
+	<li class="active"><a href="#test">Testimonials</a></li>
+<!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a> 
+	<ul class="dropdown-menu"> 
+	<li><a href="#">Page 1-1</a></li>
+	<li><a href="#">Page 1-2</a></li> 
+	<li><a href="#">Page 1-3</a></li> 
+	</ul> 
+	</li> 
+	!-->
+	<li><a href="#abt">About </a></li>
+	<li><a href="#">Page 3</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+	<li>
+	<button type="button" class="btn btn-info btn-lg-6" data-toggle="modal" data-target="#myModal" padding-top="50px">Sign Up</button>
+	</li>
+	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	</ul> </div> </div> </nav> 
+
+	<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog"> 
+ 
+<!-- Modal content--> 
+<div class="modal-content"> <div class="modal-header"> 
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+ <h4 class="modal-title">Sign Up</h4> </div>
+ <div class="modal-body"> 
+ <p>Some text in the modal.</p> </div>
+ <div class="modal-footer"> 
+ <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+ </div> 
+ </div> 
+ 
+</div> </div> 
+
+ 
+<!--
+			 <ul class="nav nav-tabs"> 
+			<li class="active">
+			<a href="#">Home</a></li> 
+			<li class="dropdown"> 
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+			 <span class="caret"></span></a> <ul class="dropdown-menu"> <li><a href="#">Submenu 1-1</a></li>
+			 <li><a href="#">Submenu 1-2</a></li> <li><a href="#">Submenu 1-3</a></li> </ul> </li>
+			 <li><a href="#">Menu 2</a></li>
+			 <li><a href="#">Menu 3</a></li> </ul> 
+	!-->
+<!--
+<div class="container"> 
+ <ul class="nav nav-pills"> 
+ <li class="active">
+ <a href="#">Home</a></li>
+ <li><a href="#">Menu 1</a></li>
+ <li><a href="#">Menu 2</a></li>
+ <li><a href="#">Menu 3</a></li>
+ </ul	>
+</div>
+!-->
+ 
+	
+	
+	<div class="container-fluid"> 
+
+ <img class="img-responsive" src="images/banner.jpg" alt="Chania" width="100%" height="345"> 
+	</div> <br><br>
+	<div class="container" id="test"> 
+	 <div class="well well-md"><h3><center><b>Testimonials</b></center></h3></div> </div> 
+	 
+	 <div class="container" id="prod> 
+	 <div class="row">
+	 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	 <div class="panel panel-default"> 
+	 <div class="panel-body"><img src="images/oracle.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> </div> 
+	 <div class="panel-footer">Oracle product<br> Price<span class="badge">Rs 10000</div>
+	 </div> </div>
+	 
+	 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	 <div class="panel panel-default"> 
+	 <div class="panel-body"><img src="images/dj_profile.jpeg" class="img-circle" alt="Cinque Terre" width="304" height="236"> </div> 
+	 <div class="panel-footer">Java product<br> Price<span class="badge">Rs 10000</div>
+	 </div> </div>
+	 
+	 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	 <div class="panel panel-default"> 
+	 <div class="panel-body"><img src="images/php.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> </div> 
+	 <div class="panel-footer">Php product<br> Price<span class="badge">Rs 10000</div>
+	 </div> </div>
+	 
+	 
+	 </div>
+	 
+	 
+	 </div>
+	 
+	 
+	 <div class="container" id="abt"> 
+	 
+	
+ 
+	<center><h2><b>About Us</b><h2></center>
+	<p>The Qayen earthquake struck Northern Iran's Khorasan Province on May 10, 1997. Centered on the village of Ardekul, around 270 kilometers (170 mi) south of Mashhad, it was the largest in the area since 1990, measuring 7.3 on the moment magnitude scale. Described as the deadliest quake of 1997 by the US Geological Survey, it ravaged the Birjand–Qayen region, killing 1,567 people and injuring more than 2,300. It damaged or destroyed over 15,000 homes, leaving 50,000 homeless, with a total estimated damage of $100 million. People trapped under the debris were assisted by rescue teams. Around 155 aftershocks caused further destruction, and drove away survivors.
+	</p>
+	 </div>
+	 </div> 
+	 
+	 
+ <div class="container">
+ <div class="jumbotron">
+ <h1>Have Fun!</h1> 
+ <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p> 
+  <div class="well well-lg"><div class="progress"> <div class="progress-bar progress-bar-success" role="progressbar" ariavaluenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">  40% Complete (success) 
+ </div> </div>
+  <div class="progress">
+ <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" ariavaluemax="100" style="width:50%">       50% Complete (info) </div>
+ </div>
+ </div>
+ 
+ </div> 
+ 
+ <div class="container"> 
+
+ 
+ <div class="well">
+  <center><h2>Contact Us</h2> </center>
+  
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+  Subscibe
+  </div>
+  
+
+
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<form class="form-inline" role="form">
+<div class="form-group  has-envelope has-feedback">
+  <label  for="email">Email:</label>
+  <input type="email" class="form-control" id="email" placeholder="Enter email">
+  <span class="glyphicon glyphicon-envelope form-control-feedback"></span> 
+  </div> 
+  </form>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+  <button type="submit" class="btn btn-default">Submit</button> 
+  </div>
+  
+  
+  </div>
+  
+  <div class="row">
+ 
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<form class="form-inline" role="form">
+<br>
+  <h4>Copyright :Debjyoti.ltd</h4>
+  <br>
+  <h4>Phone <span class="glyphicon glyphicon-phone"></span> : 986919786</h4>
+  <br>
+  <h4>Email <span class="glyphicon glyphicon-envelope"></span> : das.debjyoti56354@gmail.com</h4>
+  
+  
+  </form>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+  <br>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <form class="form-inline" role="form">
+  <div class="form-group  has-user has-feedback">
+  <label  for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter email">
+  <span class="glyphicon glyphicon-user form-control-feedback"></span> 
+  </div> 
+  </form>
+
+ 
+</div>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <form class="form-inline" role="form">
+  <div class="form-group  has-envelope has-feedback">
+  <label  for="email">Email:</label>
+  <input type="email" class="form-control" id="email" placeholder="Enter email">
+  <span class="glyphicon glyphicon-envelope form-control-feedback"></span> 
+  </div> 
+  </form>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <form class="form-inline" role="form">
+  <div class="form-group">
+ 
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="comment">
+  
+</textarea>
+  </div> 
+  </form>
+</div>
+</div>
+
+ 
+  </div>
+  
+  
+  </div>
+
+  
+ 
+
+ 
+ 
+ </div> 
+ </div>
+ 
+ 
+  
+	  
+	 
+ </body>
+ 
+ 
+ </html>
